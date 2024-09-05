@@ -25,6 +25,40 @@
         vertical-align: middle;
         align-self: center;
     }
+
+    .image-container {
+        position: relative;
+        display: inline-block;
+        width: 500px;
+        height: 500px;
+    }
+
+    .image-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 0.5s ease;
+        width: 500px;
+        height: 500px;
+    }
+
+    .image-hover {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+
+    .image-container:hover .image-default {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+
+    .image-container:hover .image-hover {
+        width: 500px;
+        height: 500px;
+        opacity: 1;
+    }
 </style>
 
 <body>
@@ -40,9 +74,12 @@
         <div>
             <header>
                 <h1 class="titles">
-                    <img class="pato" src="patoL.png" alt="pato da vida">
-                    PatoDaVida
-                    <img class="pato" src="patoR.png" alt="pato da vida">
+                    Pato
+                    <div class="image-container">
+                        <img src="patoL.png" alt="pato da vida" class="image-default">
+                        <img src="patoR.png" alt="pato da vida" class="image-hover">
+                    </div>
+                    DaVida
                 </h1>
             </header>
         </div>
